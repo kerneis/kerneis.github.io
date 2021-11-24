@@ -1,4 +1,4 @@
-baseURL = "https://kerneis.github.io/"
+baseURL = "https://gabriel.kerneis.info/"
 defaultContentLanguage = "en"
 languageCode = "en"
 title = "Gabriel Kerneis"
@@ -103,7 +103,7 @@ paginate = 12
     # Table of the contents config
     [params.page.toc]
       # whether to enable the table of the contents
-      enable = true
+      enable = false
       # whether to keep the static table of the contents in front of the post
       keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
