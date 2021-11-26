@@ -242,7 +242,7 @@ paginate = 12
     # Hackernews = "kerneis"
     # Googlescholar = ""
     # Researchgate = ""
-    Email = "gabriel@kerneis.info"
+    Email = "contact@gabriel.kerneis.info"
     RSS = true
 
 [menu]
@@ -258,13 +258,21 @@ paginate = 12
     title = ""
     weight = 1
   [[menu.main]]
+    identifier = "research"
+    pre = ""
+    post = ""
+    name = "Research"
+    url = "/research/"
+    title = ""
+    weight = 2
+  [[menu.main]]
     identifier = "about"
     pre = ""
     post = ""
     name = "About"
     url = "/about/"
     title = ""
-    weight = 2
+    weight = 3
 
 # Markup related configuration in Hugo
 [markup]
@@ -297,8 +305,8 @@ paginate = 12
 # Author config
 [author]
   name = "Gabriel Kerneis"
-  email = "gabriel@kerneis.info"
-  link = ""
+  email = "contact@gabriel.kerneis.info"
+  link = "/about"
 
 # Sitemap config
 [sitemap]
