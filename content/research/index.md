@@ -16,7 +16,7 @@ You can find find my publications below, or on
 ## Continuation-Passing C (CPC) <a id="cpc"></a>
 
 CPC was a programming language for writing concurrent systems,
-designed and developped by [Juliusz Chroboczek](irif.fr/~jch) and Gabriel Kerneis.
+designed and developped by [Juliusz Chroboczek](https://irif.fr/~jch) and Gabriel Kerneis.
 
 The CPC programmer manipulates very lightweight threads, choosing whether they
 should be cooperatively or preemptively scheduled at any given point; the CPC
@@ -40,9 +40,9 @@ Code</a> 2013.
 
 **CPC, Hekate and QEMU/CPC are not maintained anymore**, but their archived source code is still available:
 
-* [CPC source code](github.com/kerneis/cpc) 
-* [Hekate source code](github.com/kerneis/hekate) 
-* [QEMU/CPC source code](github.com/kerneis/qemu) 
+* [CPC source code](https://github.com/kerneis/cpc)
+* [Hekate source code](https://github.com/kerneis/hekate)
+* [QEMU/CPC source code](https://github.com/kerneis/qemu)
 
 ### Publications
 
@@ -80,7 +80,7 @@ environments rather than lambda-lifted:
 
 Report on some early benchmarks:
 
-> Gabriel Kerneis, Juliusz Chroboczek. 
+> Gabriel Kerneis, Juliusz Chroboczek.
 > [Are events fast?](are-events-fast.pdf).
 >  Technical report, Université Paris Diderot (2009).
 
@@ -95,6 +95,6 @@ Report on some early benchmarks:
 
 ### Publication
 
-> Kathryn E. Gray, Gabriel Kerneis, Dominic Mulligan, Christopher Pulte, Susmit Sarkar, and Peter Sewell. 
+> Kathryn E. Gray, Gabriel Kerneis, Dominic Mulligan, Christopher Pulte, Susmit Sarkar, and Peter Sewell.
 > [An integrated concurrency and core-ISA architectural envelope definition, and test oracle, for IBM POWER multiprocessors](micro-48-2015.pdf).
 > MICRO-48, Waikiki, Hawaii, USA, December 5-9, 2015.
