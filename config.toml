@@ -241,7 +241,7 @@ paginate = 12
     # Stackoverflow = "2944676"
     # Hackernews = "kerneis"
     # Googlescholar = ""
-    # Researchgate = ""
+    Researchgate = "Gabriel-Kerneis"
     Email = "contact@gabriel.kerneis.info"
     RSS = true
 
