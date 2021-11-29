@@ -35,7 +35,7 @@ Since the role of the IETF is to standardize network protocols, this sounds perf
 <p>IETF working groups start with draft standards are proposed by individual authors.
 Those drafts are then adopted by the WG to be improved collectively,
 and finally (after many stages of reviews) accepted as official RFC documents.
-I have only reviewed the drafts adopted by RATS, because finding unadopted drafts is more tedious^[unadopted];
+I have only reviewed the drafts adopted by RATS, because finding unadopted drafts is more tedious<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>;
 none of them have reached the stage of a final RFC yet.</p>
 <p>The <a href="https://tools.ietf.org/html/draft-ietf-rats-architecture" target="_blank" rel="noopener noreffer">Architecture draft</a> sets some definitions and goals, a framework of common terminology used in the other drafts.
 The <a href="https://datatracker.ietf.org/doc/html/draft-ietf-rats-reference-interaction-models" target="_blank" rel="noopener noreffer">Reference Interaction Models draft</a> defines three approaches to communicate between an attester and a verifier:
@@ -101,14 +101,14 @@ Trammell&rsquo;s other project, <a href="https://safeboot.dev/" target="_blank" 
 his <a href="https://www.youtube.com/watch?v=FobfM9S9xSI" target="_blank" rel="noopener noreffer">talk and demo</a> give good insights into why this approach is preferable to TPM-TOTP (in particular it provides more flexible policies, and a better understanding of what changed in case the laptop is compromised).</p>
 <p><a href="https://fobnail.3mdeb.com/" target="_blank" rel="noopener noreffer">Fobnail</a> is a research project by <a href="https://3mdeb.com/" target="_blank" rel="noopener noreffer">3mdeb</a> to implement a USB token performing remote attestation.
 They want to use <a href="https://github.com/Fraunhofer-SIT/charra" target="_blank" rel="noopener noreffer">CHARRA</a> for the remote attestation, but the project is still in a very early stage.
-Their milestones do not explain precisely how the plan to encapsulate CHARRA (CoAP) over USB.
+Their milestones do not explain precisely how they plan to encapsulate CHARRA (CoAP) over USB.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
 You can watch <a href="https://www.youtube.com/watch?v=xZoCtNV8Qs0&amp;t=3660s" target="_blank" rel="noopener noreffer">their talk at the latest Trenchboot summit</a>,
 with a discussion at the end about replacing CHARRA with a minimalistic protocol over NFC, USB or BLE.</p>
 <h2 id="next-steps">Next steps</h2>
 <p>I think the CoAP protocol defined in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-rats-reference-interaction-models#appendix-A" target="_blank" rel="noopener noreffer">draft-ietf-rats-reference-interaction-model</a> is a good stepping stone for this work.
 As explained above, it could be implemented either by encapsulating CoAP directly over BLE, or by running a 6LoWPAN IPv6 stack.
 It is not entirely clear which approach is preferable here, and it would be worthwhile to experiment with both.
-It may be less hassle and lower overhead to implement a self-contained solution using encapsulation than trying to bring-up a 6LoWPAN daemon in initramfs,
+It may be less hassle and lower overhead to implement a self-contained solution using encapsulation than trying to bring up a 6LoWPAN daemon in initramfs,
 but relying on existing standards has the benefit of exercising them in the field, and making them easier to re-use for the next application we come up with.</p>
 <p>Once we get a basic prototype working, a lot of thought needs to be given to the provisioning and attestation UI.
 Event logs are complex beasts, and it&rsquo;s not obvious to me what PCRs and events you want to validate.
@@ -116,4 +116,15 @@ The <a href="https://datatracker.ietf.org/doc/html/draft-ietf-rats-tpm-based-net
 defined by RATS may prove useful for this step, but I haven&rsquo;t studied them enough to have a clear opinion yet.</p>
 <p>If you are interested in the topic, please reach out to me. If I got anything wrong, let me know!
 I am hoping to host an intern working on this topic at some point in the future, so if you are a student in a French instution, don&rsquo;t hesitate to get in touch.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>They are not listed from the WG page, so you need to review the mailing-list archives and meeting notes to find discussions of them.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Update: the developpers told me that they assume IP communication and expect to use a USB network device on top of which they will run an IP stack in Fobnail.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 ]]></description></item></channel></rss>
