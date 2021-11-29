@@ -53,10 +53,10 @@ Since the role of the IETF is to standardize network protocols, this sounds perf
 IETF working groups start with draft standards are proposed by individual authors.
 Those drafts are then adopted by the WG to be improved collectively,
 and finally (after many stages of reviews) accepted as official RFC documents.
-I have only reviewed the drafts adopted by RATS, because finding unadopted drafts is more tedious^[unadopted];
+I have only reviewed the drafts adopted by RATS, because finding unadopted drafts is more tedious[^unadopted];
 none of them have reached the stage of a final RFC yet.
 
-[^unadopted]: they are not listed from the WG page, so you need to review the mailing-list archives and meeting notes to find discussions of them.
+[^unadopted]: They are not listed from the WG page, so you need to review the mailing-list archives and meeting notes to find discussions of them.
 
 The [Architecture draft](https://tools.ietf.org/html/draft-ietf-rats-architecture) sets some definitions and goals, a framework of common terminology used in the other drafts.
 The [Reference Interaction Models draft](https://datatracker.ietf.org/doc/html/draft-ietf-rats-reference-interaction-models) defines three approaches to communicate between an attester and a verifier:
@@ -132,16 +132,18 @@ his [talk and demo](https://www.youtube.com/watch?v=FobfM9S9xSI) give good insig
 
 [Fobnail](https://fobnail.3mdeb.com/) is a research project by [3mdeb](https://3mdeb.com/) to implement a USB token performing remote attestation.
 They want to use [CHARRA](https://github.com/Fraunhofer-SIT/charra) for the remote attestation, but the project is still in a very early stage.
-Their milestones do not explain precisely how the plan to encapsulate CHARRA (CoAP) over USB.
+Their milestones do not explain precisely how they plan to encapsulate CHARRA (CoAP) over USB.[^fobnail]
 You can watch [their talk at the latest Trenchboot summit](https://www.youtube.com/watch?v=xZoCtNV8Qs0&t=3660s),
 with a discussion at the end about replacing CHARRA with a minimalistic protocol over NFC, USB or BLE.
+
+[^fobnail]: Update: the developpers told me that they assume IP communication and expect to use a USB network device on top of which they will run an IP stack in Fobnail.
 
 ## Next steps
 
 I think the CoAP protocol defined in [draft-ietf-rats-reference-interaction-model](https://datatracker.ietf.org/doc/html/draft-ietf-rats-reference-interaction-models#appendix-A) is a good stepping stone for this work.
 As explained above, it could be implemented either by encapsulating CoAP directly over BLE, or by running a 6LoWPAN IPv6 stack.
 It is not entirely clear which approach is preferable here, and it would be worthwhile to experiment with both.
-It may be less hassle and lower overhead to implement a self-contained solution using encapsulation than trying to bring-up a 6LoWPAN daemon in initramfs,
+It may be less hassle and lower overhead to implement a self-contained solution using encapsulation than trying to bring up a 6LoWPAN daemon in initramfs,
 but relying on existing standards has the benefit of exercising them in the field, and making them easier to re-use for the next application we come up with.
 
 Once we get a basic prototype working, a lot of thought needs to be given to the provisioning and attestation UI.
