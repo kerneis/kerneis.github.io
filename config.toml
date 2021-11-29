@@ -144,6 +144,17 @@ paginate = 12
       Skype = false
       Trello = false
       Mix = false
+    # Comments
+    [params.page.comment]
+      enable = true
+      [params.page.comment.utterances]
+        enable = true
+        # owner/repo
+        repo = "kerneis/kerneis.github.io"
+        issueTerm = "pathname"
+        label = "comments"
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
     # Third-party library config
     [params.page.library]
       [params.page.library.css]
