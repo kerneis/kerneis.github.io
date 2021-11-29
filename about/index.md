@@ -1,4 +1,4 @@
-# 
+# About
 
 I work as a Security Researcher at [ANSII](https://ssi.gouv.fr), the National Cybersecurity Agency of France.
 My research focuses on firmwares, trusted environment and secure boot mechanisms.
