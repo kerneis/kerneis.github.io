@@ -179,9 +179,9 @@ paginate = 12
   # Site SEO config
   [params.seo]
     # image URL
-    image = "/images/Apple-Devices-Preview.png"
+    image = ""
     # thumbnail URL
-    thumbnailUrl = "/images/screenshot.png"
+    thumbnailUrl = ""
 
   # Analytics config
   [params.analytics]
