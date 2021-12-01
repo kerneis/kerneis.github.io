@@ -1,11 +1,11 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Gabriel Kerneis</title><link>https://gabriel.kerneis.info/</link><description>Gabriel Kerneis' website</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>contact@gabriel.kerneis.info (Gabriel Kerneis)</managingEditor><webMaster>contact@gabriel.kerneis.info (Gabriel Kerneis)</webMaster><atom:link href="https://gabriel.kerneis.info/index.xml" rel="self" type="application/rss+xml"/><item><title>TPM remote attestation over Bluetooth</title><link>https://gabriel.kerneis.info/2021/11/local_attestation/</link><pubDate>Mon, 29 Nov 2021 10:00:00 +0100</pubDate><author>Author</author><guid>https://gabriel.kerneis.info/2021/11/local_attestation/</guid><description><![CDATA[<p>How can you be sure that the software running on your computer has not been tampered with since you installed it?
 Even if your disk is encrypted, how can you be sure that the password prompt at boot is not a trap planted by an evil third-party that will exfiltrate all your data?
-Those are the some of the questions that the field of &ldquo;secure computing&rdquo; tries to address.
+Those are some of the questions that the field of &ldquo;secure computing&rdquo; tries to address.
 The answers are built through complex combinations of hardware (<a href="https://en.wikipedia.org/wiki/Central_processing_unit" target="_blank" rel="noopener noreffer">CPU</a>, <a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module" target="_blank" rel="noopener noreffer">TPM</a>, flash memory) and software (<a href="https://en.wikipedia.org/wiki/BIOS" target="_blank" rel="noopener noreffer">BIOS</a>, <a href="https://en.wikipedia.org/wiki/Operating_system" target="_blank" rel="noopener noreffer">OS</a>) components.</p>
 <p>In this post, I will focus on a smaller part of the problem: measured boot and remote attestation.
 How do you prove to a remote third-party that your computer is the one it has on record, and that it runs the sofware it expects?
 This third-party may be your network administrator, who wants to deny intruder or compromised machines on the intranet.
-Or it could be yourself facing your computer: what if you could use you a trusted device (eg. your phone) to communicate with your machine over bluetooth to make sure it has not been swaped or altered in your hotel room while you were enjoying a nice dinner with other conference attendees?
+Or it could be yourself facing your computer: what if you could use a trusted device (eg. your phone) to communicate with your machine over bluetooth to make sure it has not been swaped or altered in your hotel room while you were enjoying a nice dinner with other conference attendees?
 I recently got interested in the latter use-case, so I started researching existing standards and solutions.
 <em>Spoiler:</em> I may need to build this app myself.</p>
 <p>What follows is my understanding of the current landscape for remote attestation, from a practical perspective:
@@ -32,7 +32,7 @@ The choice of the transport and application layers is left unspecified by docume
 <p>The <a href="https://datatracker.ietf.org/wg/rats/about/" target="_blank" rel="noopener noreffer">IETF RATS Working Group</a> seeks to standardize formats for remote attestations.
 Its charter is broad, ranging from FIDO to TPM and Android Keystore, but for now it seems very focused on TPM-related applications.
 Since the role of the IETF is to standardize network protocols, this sounds perfect for our interest.</p>
-<p>IETF working groups start with draft standards are proposed by individual authors.
+<p>IETF working groups start with draft standards proposed by individual authors.
 Those drafts are then adopted by the WG to be improved collectively,
 and finally (after many stages of reviews) accepted as official RFC documents.
 I have only reviewed the drafts adopted by RATS, because finding unadopted drafts is more tedious<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>;

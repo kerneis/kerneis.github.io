@@ -3,13 +3,13 @@
 
 How can you be sure that the software running on your computer has not been tampered with since you installed it?
 Even if your disk is encrypted, how can you be sure that the password prompt at boot is not a trap planted by an evil third-party that will exfiltrate all your data?
-Those are the some of the questions that the field of "secure computing" tries to address.
+Those are some of the questions that the field of "secure computing" tries to address.
 The answers are built through complex combinations of hardware ([CPU](https://en.wikipedia.org/wiki/Central_processing_unit), [TPM](https://en.wikipedia.org/wiki/Trusted_Platform_Module), flash memory) and software ([BIOS](https://en.wikipedia.org/wiki/BIOS), [OS](https://en.wikipedia.org/wiki/Operating_system)) components.
 
 In this post, I will focus on a smaller part of the problem: measured boot and remote attestation.
 How do you prove to a remote third-party that your computer is the one it has on record, and that it runs the sofware it expects?
 This third-party may be your network administrator, who wants to deny intruder or compromised machines on the intranet.
-Or it could be yourself facing your computer: what if you could use you a trusted device (eg. your phone) to communicate with your machine over bluetooth to make sure it has not been swaped or altered in your hotel room while you were enjoying a nice dinner with other conference attendees?
+Or it could be yourself facing your computer: what if you could use a trusted device (eg. your phone) to communicate with your machine over bluetooth to make sure it has not been swaped or altered in your hotel room while you were enjoying a nice dinner with other conference attendees?
 I recently got interested in the latter use-case, so I started researching existing standards and solutions.
 *Spoiler:* I may need to build this app myself.
 
@@ -45,7 +45,7 @@ The [IETF RATS Working Group](https://datatracker.ietf.org/wg/rats/about/) seeks
 Its charter is broad, ranging from FIDO to TPM and Android Keystore, but for now it seems very focused on TPM-related applications.
 Since the role of the IETF is to standardize network protocols, this sounds perfect for our interest.
 
-IETF working groups start with draft standards are proposed by individual authors.
+IETF working groups start with draft standards proposed by individual authors.
 Those drafts are then adopted by the WG to be improved collectively,
 and finally (after many stages of reviews) accepted as official RFC documents.
 I have only reviewed the drafts adopted by RATS, because finding unadopted drafts is more tedious[^unadopted];
